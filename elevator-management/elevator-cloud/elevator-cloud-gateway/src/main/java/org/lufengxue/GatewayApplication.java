@@ -1,5 +1,7 @@
 package org.lufengxue;
 
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
@@ -11,10 +13,12 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * 时    间:  20:01
  * 描    述:
  */
+@Slf4j
 @SpringBootApplication
 @EnableEurekaClient
 public class GatewayApplication {
     public static void main(String[] args) {
-
+        SpringApplication.run(GatewayApplication.class,args);
+        log.info("网关服务启动成功");
     }
 }

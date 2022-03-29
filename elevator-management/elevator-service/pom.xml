@@ -10,6 +10,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>elevator-service</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>elevator-service-user</module>
+    </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.lufengxue</groupId>
+            <artifactId>elevator-common</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
