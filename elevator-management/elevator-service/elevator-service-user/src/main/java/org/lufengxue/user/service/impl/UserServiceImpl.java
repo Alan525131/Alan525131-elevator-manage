@@ -1,6 +1,6 @@
 package org.lufengxue.user.service.impl;
 
-import org.lufengxue.user.pojo.po.User;
+import org.lufengxue.user.pojo.po.UserPo;
 import org.lufengxue.user.mapper.UserMapper;
 import org.lufengxue.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
     @Override
-    public User findByName(String name) {
+    public UserPo findByName(String name) {
         return userMapper.findByName(name);
     }
 }

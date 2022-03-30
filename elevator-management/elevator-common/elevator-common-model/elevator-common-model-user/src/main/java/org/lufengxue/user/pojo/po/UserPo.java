@@ -20,8 +20,8 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="user")
-public class User {
+@Table(name="ele_user")
+public class UserPo {
 
     @ApiModelProperty("用户id")
     private Long id;

@@ -1,6 +1,6 @@
 package org.lufengxue.user.mapper;
 
-import org.lufengxue.user.pojo.po.User;
+import org.lufengxue.user.pojo.po.UserPo;
 
 /**
  * 作 者: 陆奉学
@@ -14,5 +14,5 @@ public interface UserMapper {
 
     // todo   有问题待解决 明天再来
 
-    User findByName(String name);
+    UserPo findByName(String name);
 }

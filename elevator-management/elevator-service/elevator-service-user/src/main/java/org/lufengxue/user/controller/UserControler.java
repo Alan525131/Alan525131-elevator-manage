@@ -2,7 +2,7 @@ package org.lufengxue.user.controller;
 
 import org.lufengxue.user.enums.StatusCode;
 import org.lufengxue.user.pojo.bo.Result;
-import org.lufengxue.user.pojo.po.User;
+import org.lufengxue.user.pojo.po.UserPo;
 import org.lufengxue.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,8 +30,8 @@ public class UserControler {
      * c查询用户信息
      */
     @GetMapping("/load{name}")
-    public Result<User> findByName(@PathVariable(name = "name") String name){
-        User user = userService.findByName(name);
+    public Result<UserPo> findByName(@PathVariable(name = "name") String name){
+        UserPo user = userService.findByName(name);
         return new Result<>(true, StatusCode.OK,"查询用户数据成功",user);
     }
 }

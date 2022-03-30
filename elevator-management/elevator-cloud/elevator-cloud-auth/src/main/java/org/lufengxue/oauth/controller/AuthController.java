@@ -26,12 +26,11 @@ import java.util.Date;
  * 时    间:  14:07
  * 描    述:
  */
-@Slf4j
 @RestController
 @RequestMapping("/user")
 public class AuthController {
-    //jwt过期时间
-    @Value("{auth.ttl}")
+//    //jwt过期时间
+//    @Value("{auth.ttl}")
     private Date ttl;
     //客户端ID
     @Value("${auth.clientId}")

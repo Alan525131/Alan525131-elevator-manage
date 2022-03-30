@@ -21,8 +21,8 @@ import java.util.Date;
 //@Data
 //@AllArgsConstructor
 //@NoArgsConstructor
-@Table(name="user")
-public class User implements Serializable {
+@Table(name="ele_user")
+public class UserDto implements Serializable {
 
     @ApiModelProperty("用户id")
     private Long id;

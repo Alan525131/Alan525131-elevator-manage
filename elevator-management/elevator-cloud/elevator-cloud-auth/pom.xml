@@ -56,5 +56,11 @@
             <artifactId>elevator-common-model-user</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.lufengxue</groupId>
+            <artifactId>elevator-service-user</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 </project>

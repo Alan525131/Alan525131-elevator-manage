@@ -1,7 +1,7 @@
 package org.lufengxue.user.feign;
 
 import org.lufengxue.user.pojo.bo.Result;
-import org.lufengxue.user.pojo.po.User;
+import org.lufengxue.user.pojo.po.UserPo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,5 +20,5 @@ public interface UserFeign {
      * c查询用户信息
      */
     @GetMapping("/load{name}")
-    public Result<User> findByName(@PathVariable(name = "name") String name);
+    public Result<UserPo> findByName(@PathVariable(name = "name") String name);
 }

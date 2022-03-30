@@ -138,6 +138,8 @@
     <orderEntry type="library" name="Maven: io.github.openfeign:feign-slf4j:10.12" level="project" />
     <orderEntry type="library" name="Maven: io.github.openfeign:feign-hystrix:10.12" level="project" />
     <orderEntry type="library" name="Maven: com.netflix.hystrix:hystrix-core:1.5.18" level="project" />
+    <orderEntry type="module" module-name="elevator-service-user" />
+    <orderEntry type="module" module-name="elevator-common" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.18.20" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:2.2.8.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter:2.2.8.RELEASE" level="project" />

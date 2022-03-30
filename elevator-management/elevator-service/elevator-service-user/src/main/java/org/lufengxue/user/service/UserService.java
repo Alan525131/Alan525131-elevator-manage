@@ -1,6 +1,6 @@
 package org.lufengxue.user.service;
 
-import org.lufengxue.user.pojo.po.User;
+import org.lufengxue.user.pojo.po.UserPo;
 
 /**
  * 作 者: 陆奉学
@@ -11,5 +11,5 @@ import org.lufengxue.user.pojo.po.User;
  * 描    述:
  */
 public interface UserService {
-    User findByName(String name);
+    UserPo findByName(String name);
 }

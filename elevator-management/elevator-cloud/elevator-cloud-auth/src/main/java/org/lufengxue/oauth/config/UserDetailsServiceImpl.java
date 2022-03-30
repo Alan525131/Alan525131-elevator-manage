@@ -2,6 +2,8 @@ package org.lufengxue.oauth.config;
 import lombok.extern.slf4j.Slf4j;
 import org.lufengxue.user.feign.UserFeign;
 import org.lufengxue.user.pojo.bo.Result;
+import org.lufengxue.user.pojo.po.UserPo;
+import org.lufengxue.user.service.UserService;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
@@ -45,7 +47,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             //1.4 启用feignclients
             //1.5 注入 调用
         //1.6 需要在user微服务中进行放行路径
-        Result<org.lufengxue.user.pojo.po.User > result = userFeign .findByName(username);
+        Result<UserPo> result = userFeign.findByName(username);
         //2.判断用户是否存在，如果不存在 抛出异常
         if (result.getData()==null) {
             //throw new UsernameNotFoundException("用户不存在");
@@ -54,7 +56,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         //3.获取用户的密码 然后交给框架本身 他自己进行校验
         String password = result.getData().getPassword();//加密过的！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
 
-        //return new User(username, passwordEncoder.encode("szitheima"),
+        //return new UserDto(username, passwordEncoder.encode("szitheima"),
 
         //AuthorityUtils.commaSeparatedStringToAuthorityList(permission));
 
