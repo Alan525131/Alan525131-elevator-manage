@@ -1,14 +1,13 @@
-package org.lufengxue.config;
+package org.lufengxue.oauth.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.oauth2.resource.JwtAccessTokenConverterConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.ClientDetailsService;
 import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
@@ -26,18 +25,16 @@ import java.security.KeyPair;
  * 包    名:  org.lufengxue.config
  * 日    期:  2022-03-2022/3/29
  * 时    间:  11:14
- * 描    述:
+ * 描    述:  标识该微服务就是一个认证服务器
  */
 
-/**
- * 标识该微服务就是一个认证服务器
- */
 @Configuration
-@EnableAspectJAutoProxy
+@EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
     /**
      * 该配置用于配置开放端点使用，比如哪些安全端点需要放行(加密密码)
      */
+    // todo 这里 有问题???
     @Autowired
     private PasswordEncoder passwordEncoder;
 

@@ -1,4 +1,4 @@
-package org.lufengxue.config;
+package org.lufengxue.oauth.config;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

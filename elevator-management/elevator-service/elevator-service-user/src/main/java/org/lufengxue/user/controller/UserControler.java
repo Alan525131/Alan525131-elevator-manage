@@ -6,6 +6,7 @@ import org.lufengxue.user.pojo.po.User;
 import org.lufengxue.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,8 +29,8 @@ public class UserControler {
     /**
      * c查询用户信息
      */
-    @GetMapping("/load")
-    public Result<User>findByName(String name){
+    @GetMapping("/load{name}")
+    public Result<User> findByName(@PathVariable(name = "name") String name){
         User user = userService.findByName(name);
         return new Result<>(true, StatusCode.OK,"查询用户数据成功",user);
     }

@@ -1,4 +1,4 @@
-package org.lufengxue.util;
+package org.lufengxue.oauth.util;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

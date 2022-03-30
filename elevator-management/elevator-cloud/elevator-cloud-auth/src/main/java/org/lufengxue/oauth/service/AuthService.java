@@ -1,4 +1,4 @@
-package org.lufengxue.service;
+package org.lufengxue.oauth.service;
 
 import org.lufengxue.user.pojo.bo.AuthToken;
 

@@ -1,7 +1,8 @@
-package org.lufengxue.config;
+package org.lufengxue.oauth.config;
 import lombok.extern.slf4j.Slf4j;
+import org.lufengxue.user.feign.UserFeign;
 import org.lufengxue.user.pojo.bo.Result;
-import org.lufengxue.user.pojo.po.User;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -25,9 +26,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private PasswordEncoder passwordEncoder;
 
     @Autowired
-    private UserSerice userSerice;
+    private UserFeign userFeign;
 
     /**
+     *
      获取用户信息（一般是加密之后的密码，然后交给spring security的框架，框架自动的进行匹配成功，返回成功，失败报错）
      */
     @Override
@@ -43,7 +45,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             //1.4 启用feignclients
             //1.5 注入 调用
         //1.6 需要在user微服务中进行放行路径
-        Result result =userSerice .findById(username);
+        Result<org.lufengxue.user.pojo.po.User > result = userFeign .findByName(username);
         //2.判断用户是否存在，如果不存在 抛出异常
         if (result.getData()==null) {
             //throw new UsernameNotFoundException("用户不存在");

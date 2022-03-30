@@ -1,11 +1,11 @@
-package org.lufengxue.controller;
+package org.lufengxue.oauth.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.lufengxue.user.enums.StatusCode;
 import org.lufengxue.user.pojo.bo.AuthToken;
 import org.lufengxue.user.pojo.bo.Result;
-import org.lufengxue.service.AuthService;
-import org.lufengxue.util.CookieUtil;
+import org.lufengxue.oauth.service.AuthService;
+import org.lufengxue.oauth.util.CookieUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.util.StringUtils;

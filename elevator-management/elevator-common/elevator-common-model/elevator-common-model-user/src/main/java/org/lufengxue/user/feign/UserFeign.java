@@ -4,6 +4,7 @@ import org.lufengxue.user.pojo.bo.Result;
 import org.lufengxue.user.pojo.po.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * 作 者: 陆奉学
@@ -18,6 +19,6 @@ public interface UserFeign {
     /**
      * c查询用户信息
      */
-    @GetMapping("/load")
-    public Result<User> findByName(String name);
+    @GetMapping("/load{name}")
+    public Result<User> findByName(@PathVariable(name = "name") String name);
 }

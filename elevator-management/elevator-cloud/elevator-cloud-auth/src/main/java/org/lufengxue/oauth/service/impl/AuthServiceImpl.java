@@ -1,7 +1,7 @@
-package org.lufengxue.service.impl;
+package org.lufengxue.oauth.service.impl;
 
+import org.lufengxue.oauth.service.AuthService;
 import org.lufengxue.user.pojo.bo.AuthToken;
-import org.lufengxue.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
@@ -9,6 +9,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.ClientHttpResponse;
+import org.springframework.stereotype.Service;
 import org.springframework.util.Base64Utils;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -27,6 +28,7 @@ import java.util.Map;
  * 时    间:  20:34
  * 描    述:
  */
+@Service
 public class AuthServiceImpl implements AuthService {
 
     // Ribbon 调用

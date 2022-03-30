@@ -56,6 +56,5 @@
             <artifactId>elevator-common-model-user</artifactId>
             <version>1.0.0</version>
         </dependency>
-
     </dependencies>
 </project>
