@@ -26,9 +26,13 @@ public class UserPo {
     @ApiModelProperty("用户id")
     private Long id;
 
+//    @ApiModelProperty("用户名")
+//    @Column(name = "name")
+//    private String userName;
     @ApiModelProperty("用户名")
     @Column(name = "name")
-    private String userName;
+    private String name;
+
 
     @ApiModelProperty("用户姓名")
     @Column(name = "password")
