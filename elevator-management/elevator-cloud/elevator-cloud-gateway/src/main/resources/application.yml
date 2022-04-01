@@ -1,6 +1,6 @@
 spring:
   application:
-    name: gateway-web
+    name: gateway
   cloud:
     gateway:
       globalcors:
@@ -16,7 +16,7 @@ spring:
       routes:
 
         # 鉴权服务
-        - id: oauth
+        - id: user
           uri: lb://oauth
           predicates:
             - Path=/oauth/**

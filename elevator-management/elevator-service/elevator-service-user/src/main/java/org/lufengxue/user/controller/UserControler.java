@@ -1,6 +1,7 @@
 package org.lufengxue.user.controller;
 
 
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.lufengxue.enums.StatusCode;
 import org.lufengxue.response.Result;
@@ -30,11 +31,12 @@ public class UserControler {
     private UserService userService;
 
     /**
-     *  新增用户  todo sql 问题
+     *  新增用户
      * @param
      * @return
      */
     @PostMapping("/insert")
+    @ApiOperation(value="新增用户", notes="添加数据")
     public Result insert(@RequestBody UserPo userPo) {
         Integer userNumber = userService.insert(userPo);
         if (userNumber >= 1) {
@@ -47,7 +49,9 @@ public class UserControler {
     /**
      * feign调用  根据用户名 查询用户信息
      */
+
     @GetMapping("/load")
+    @ApiOperation(value="根据用户名 查询用户信息", notes="feign调用")
     public Result<UserDto> findByName(@RequestParam(name = "name") String name){
         UserDto user = userService.findByName(name);
         return new Result(true, StatusCode.OK,"查询用户数据成功",user);
@@ -56,6 +60,7 @@ public class UserControler {
      * 删除用户
      */
     @PostMapping("/delete/{id}")
+    @ApiOperation(value = "删除用户",notes = "根据用户id删除用户数据")
     public Result deleteId(@PathVariable(name = "id") Integer id){
         Integer number = userService.deleteId(id);
         if(number >= 1){
@@ -69,7 +74,8 @@ public class UserControler {
      * 查询用户列表
      * @return
      */
-    @GetMapping
+    @GetMapping("/findAll")
+    @ApiOperation(value = "查询用户列表",notes = "查询所有用户")
     public Result<List<UserDto>> findAll(){
        List<UserDto> userDtoList = userService.findAll();
        return  new Result<>(true,StatusCode.OK,"查询用户数据成功",userDtoList);
@@ -77,7 +83,8 @@ public class UserControler {
     /**
      * 更新数据
      */
-    @PostMapping
+    @PostMapping("/updateUser")
+    @ApiOperation(value = "更新用户列表",notes = "根据用户id更新用户数据")
     public Result updateUser(@RequestBody UserDto userDto){
       Integer number = userService.updateUser(userDto);
       if(number >0){
@@ -86,5 +93,4 @@ public class UserControler {
           throw new RuntimeException("更新用户数据失败");
       }
     }
-
 }

@@ -34,4 +34,4 @@ jks:
 
 logging:
   level:
-    org.lufengxue.searchsql.mapper: debug
+    org.lufengxue.mapper: debug
