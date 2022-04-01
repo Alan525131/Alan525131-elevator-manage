@@ -7,7 +7,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
-import tk.mybatis.spring.annotation.MapperScan;
 
 /**
  * 作 者: 陆奉学
@@ -20,7 +19,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @Slf4j
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients(basePackages = "org.lufengxue.user.feign")
+@EnableFeignClients(basePackages = "org.lufengxue.user.userFeign")
 public class OauthApplication {
     public static void main(String[] args) {
         SpringApplication.run(OauthApplication.class,args);

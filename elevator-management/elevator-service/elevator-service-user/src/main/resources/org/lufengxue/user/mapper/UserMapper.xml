@@ -8,14 +8,14 @@
 <!--        insert into ele_user where name =#{name}-->
 <!--    </insert>-->
     <!--添加用户数据-->
-        <insert id="insert" parameterType="org.lufengxue.user.pojo.po.UserPo" >
+        <insert id="insert" parameterType="org.lufengxue.user.pojo.dto.UserDto" >
 
         insert into ele_user
                     (name,password,sex,phone,created_date,updated_date)
                     value (#{name},#{password},#{sex}, #{phone},#{created_date},#{updated_date})
     </insert>
     <!--更新数据-->
-    <update id="updateUser" parameterType="org.lufengxue.user.pojo.po.UserPo">
+    <update id="updateUser" parameterType="org.lufengxue.user.pojo.dto.UserDto">
         update set ele_user
                     name =#{name},password=#{password},sex =#{sex}, phone =#{phone}
                     created_date =#{created_date},updated_date =#{updated_date}

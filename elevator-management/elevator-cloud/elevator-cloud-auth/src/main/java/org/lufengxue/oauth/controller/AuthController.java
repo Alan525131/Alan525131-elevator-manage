@@ -1,7 +1,7 @@
 package org.lufengxue.oauth.controller;
 
 import org.lufengxue.enums.StatusCode;
-import org.lufengxue.user.pojo.bo.AuthToken;
+import org.lufengxue.user.pojo.userBo.AuthToken;
 import org.lufengxue.response.Result;
 import org.lufengxue.oauth.service.AuthService;
 import org.lufengxue.oauth.util.CookieUtil;

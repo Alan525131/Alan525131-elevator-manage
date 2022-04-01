@@ -1,4 +1,4 @@
-package org.lufengxue.user.feign;
+package org.lufengxue.user.userFeign;
 
 import org.lufengxue.response.Result;
 import org.lufengxue.user.pojo.po.UserPo;

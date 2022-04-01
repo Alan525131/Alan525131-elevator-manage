@@ -1,4 +1,4 @@
-package org.lufengxue.user.pojo.bo;
+package org.lufengxue.user.pojo.userBo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

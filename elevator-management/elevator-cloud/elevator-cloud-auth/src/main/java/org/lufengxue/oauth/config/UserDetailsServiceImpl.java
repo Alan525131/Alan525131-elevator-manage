@@ -1,6 +1,6 @@
 package org.lufengxue.oauth.config;
 import lombok.extern.slf4j.Slf4j;
-import org.lufengxue.user.feign.UserFeign;
+import org.lufengxue.user.userFeign.UserFeign;
 import org.lufengxue.response.Result;
 import org.lufengxue.user.pojo.po.UserPo;
 import org.springframework.security.core.userdetails.User;

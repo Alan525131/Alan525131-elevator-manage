@@ -18,9 +18,9 @@ import java.util.Date;
  * 时    间:  16:47
  * 描    述:
  */
-//@Data
-//@AllArgsConstructor
-//@NoArgsConstructor
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name="ele_user")
 public class UserDto implements Serializable {
 
@@ -29,7 +29,7 @@ public class UserDto implements Serializable {
 
     @ApiModelProperty("用户名")
     @Column(name = "name")
-    private String userName;
+    private String name;
 
     @ApiModelProperty("用户密码")
     @Column(name = "password")
@@ -51,60 +51,4 @@ public class UserDto implements Serializable {
     @Column(name = "updated_date")
     private Date updatedDate;
 
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public Date getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public Date getUpdatedDate() {
-        return updatedDate;
-    }
-
-    public void setUpdatedDate(Date updatedDate) {
-        this.updatedDate = updatedDate;
-    }
 }

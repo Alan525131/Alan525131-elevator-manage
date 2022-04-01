@@ -18,7 +18,6 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
 
-    // todo   有问题待解决 明天再来
     UserDto findByName(String name);
 
     Integer insert(UserPo userPo);
@@ -27,5 +26,5 @@ public interface UserMapper {
 
     List<UserDto> findAll();
 
-    Integer updateUser(UserPo userPo);
+    Integer updateUser(UserDto userDto);
 }

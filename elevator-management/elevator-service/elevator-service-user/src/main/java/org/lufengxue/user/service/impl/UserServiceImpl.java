@@ -67,8 +67,8 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     @Override
-    public Integer updateUser(UserPo userPo) {
-        return userMapper.updateUser(userPo);
+    public Integer updateUser(UserDto userDto) {
+        return userMapper.updateUser(userDto);
     }
 
 }

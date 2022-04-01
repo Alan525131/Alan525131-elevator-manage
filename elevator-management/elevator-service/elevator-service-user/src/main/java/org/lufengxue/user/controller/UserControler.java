@@ -31,7 +31,7 @@ public class UserControler {
 
     /**
      *  新增用户  todo sql 问题
-     * @param name
+     * @param
      * @return
      */
     @PostMapping("/insert")
@@ -78,8 +78,8 @@ public class UserControler {
      * 更新数据
      */
     @PostMapping
-    public Result updateUser(@RequestBody UserPo userPo){
-      Integer number = userService.updateUser(userPo);
+    public Result updateUser(@RequestBody UserDto userDto){
+      Integer number = userService.updateUser(userDto);
       if(number >0){
           return new Result(true,StatusCode.OK,"更新用户数据成功");
       }else {

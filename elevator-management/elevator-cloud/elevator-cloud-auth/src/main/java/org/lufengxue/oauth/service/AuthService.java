@@ -1,6 +1,6 @@
 package org.lufengxue.oauth.service;
 
-import org.lufengxue.user.pojo.bo.AuthToken;
+import org.lufengxue.user.pojo.userBo.AuthToken;
 
 /**
  * 作 者: 陆奉学

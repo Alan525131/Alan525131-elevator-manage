@@ -23,5 +23,5 @@ public interface UserService {
 
     List<UserDto> findAll();
 
-    Integer updateUser(UserPo userPo);
+    Integer updateUser(UserDto userDto);
 }
