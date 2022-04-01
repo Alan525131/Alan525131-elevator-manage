@@ -1,5 +1,5 @@
 server:
-  port: 18011
+  port: 18089
 spring:
   application:
     name: user
@@ -7,7 +7,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/elevator-management?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
-    password: 123456
+    password: root
   main:
     allow-bean-definition-overriding: true
 #  cloud:
@@ -26,6 +26,10 @@ feign:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true #启用驼峰命名
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapeer/*.xml
 #seata:
 #  enable-auto-data-source-proxy: false # 不在用自动代理，自动代理的时候hikariCp链接池会有问题，采用druid的数据源
-
+logging:
+  level:
+    org.lufengxue.mapper: debug

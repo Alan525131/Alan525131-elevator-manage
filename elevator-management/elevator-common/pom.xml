@@ -16,7 +16,9 @@
         <module>elevator-common-redis</module>
         <module>elevator-common-util</module>
         <module>elevator-common-model</module>
+        <module>elevator-common-core</module>
     </modules>
 
+    <dependencies>    </dependencies>
 
 </project>

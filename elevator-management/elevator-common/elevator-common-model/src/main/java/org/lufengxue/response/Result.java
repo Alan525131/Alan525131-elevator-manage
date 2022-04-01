@@ -1,8 +1,8 @@
-package org.lufengxue.user.pojo.bo;
+package org.lufengxue.response;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.lufengxue.user.enums.StatusCode;
+import org.lufengxue.enums.StatusCode;
 
 import java.io.Serializable;
 

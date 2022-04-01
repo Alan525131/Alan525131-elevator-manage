@@ -1,4 +1,4 @@
-package org.lufengxue.user.enums;
+package org.lufengxue.enums;
 
 
 /**

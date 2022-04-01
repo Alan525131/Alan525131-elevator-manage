@@ -1,6 +1,6 @@
 package org.lufengxue.user.feign;
 
-import org.lufengxue.user.pojo.bo.Result;
+import org.lufengxue.response.Result;
 import org.lufengxue.user.pojo.po.UserPo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

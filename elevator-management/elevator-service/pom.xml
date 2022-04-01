@@ -18,8 +18,9 @@
     <dependencies>
         <dependency>
             <groupId>org.lufengxue</groupId>
-            <artifactId>elevator-common</artifactId>
+            <artifactId>elevator-common-model</artifactId>
         </dependency>
+
     </dependencies>
 
 </project>

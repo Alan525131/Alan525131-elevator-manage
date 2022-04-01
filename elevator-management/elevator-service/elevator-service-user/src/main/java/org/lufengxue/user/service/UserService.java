@@ -1,6 +1,9 @@
 package org.lufengxue.user.service;
 
+import org.lufengxue.user.pojo.dto.UserDto;
 import org.lufengxue.user.pojo.po.UserPo;
+
+import java.util.List;
 
 /**
  * 作 者: 陆奉学
@@ -11,5 +14,14 @@ import org.lufengxue.user.pojo.po.UserPo;
  * 描    述:
  */
 public interface UserService {
-    UserPo findByName(String name);
+
+    UserDto findByName(String name);
+
+    Integer insert(UserPo userPo);
+
+    Integer deleteId(Integer id);
+
+    List<UserDto> findAll();
+
+    Integer updateUser(UserPo userPo);
 }

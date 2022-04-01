@@ -17,12 +17,14 @@ import tk.mybatis.spring.annotation.MapperScan;
  * 时    间:  8:07
  * 描    述:
  */
+@Slf4j
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients(basePackages = "org.lufengxue.user.feign")
 public class OauthApplication {
     public static void main(String[] args) {
         SpringApplication.run(OauthApplication.class,args);
+        log.info("Oauth执行了========================================");
     }
     @Bean(name = "restTemplate")
     public RestTemplate restTemplate() {

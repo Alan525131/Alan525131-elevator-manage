@@ -10,13 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>elevator-service-user</artifactId>
-
     <dependencies>
-        <dependency>
-            <groupId>org.lufengxue</groupId>
-            <artifactId>elevator-common-model-user</artifactId>
-            <version>1.0.0</version>
-        </dependency>
 
     </dependencies>
+
 </project>

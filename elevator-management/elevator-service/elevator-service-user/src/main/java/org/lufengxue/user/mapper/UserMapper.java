@@ -1,6 +1,11 @@
 package org.lufengxue.user.mapper;
 
+
+import org.apache.ibatis.annotations.Mapper;
+import org.lufengxue.user.pojo.dto.UserDto;
 import org.lufengxue.user.pojo.po.UserPo;
+
+import java.util.List;
 
 /**
  * 作 者: 陆奉学
@@ -10,9 +15,17 @@ import org.lufengxue.user.pojo.po.UserPo;
  * 时    间:  1:11
  * 描    述:
  */
+@Mapper
 public interface UserMapper {
 
     // todo   有问题待解决 明天再来
+    UserDto findByName(String name);
 
-    UserPo findByName(String name);
+    Integer insert(UserPo userPo);
+
+    Integer deleteId(Integer id);
+
+    List<UserDto> findAll();
+
+    Integer updateUser(UserPo userPo);
 }
